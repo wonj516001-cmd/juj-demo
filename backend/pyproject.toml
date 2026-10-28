@@ -1,0 +1,64 @@
+# ==========================================================
+# JUJ 合成行情回测 Demo —— 后端项目配置
+#
+# 本文件只承载 pytest 配置与项目元信息。
+#
+# 【为什么不声明 dependencies】
+#   依赖由 requirements.txt / requirements-dev.txt 唯一管理，
+#   并使用精确版本（==）钉死 —— 回测结果必须可复现，
+#   依赖也必须可复现。
+#
+#   若在此处再声明 [project].dependencies，
+#   会出现两个依赖来源，版本可能不一致，
+#   且 `pip install .` 与 `pip install -r requirements.txt`
+#   的行为会变得不可预期。
+#
+#   因此：**本项目不提供 pip install . 的安装方式**，
+#   请始终使用 requirements.txt。
+# ==========================================================
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "juj-demo"
+version = "0.1.0"
+description = "JUJ 合成行情回测 Demo —— 零外部依赖的策略回测演示"
+readme = "../README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+
+# 依赖见 backend/requirements.txt（不重复声明，理由见文件头）
+
+[tool.setuptools]
+# 本项目不作为可安装包分发，仅用于承载 pytest 配置
+packages = []
+
+[tool.pytest.ini_options]
+# ----------------------------------------------------------
+# 测试配置
+#
+# pythonpath 让 pytest 自动把 backend/ 加入导入路径，
+# 这样各测试文件就不必各自写一遍
+#
+#     BACKEND_ROOT = Path(__file__).resolve().parent.parent
+#     if str(BACKEND_ROOT) not in sys.path:
+#         sys.path.insert(0, str(BACKEND_ROOT))
+#
+# ----------------------------------------------------------
+pythonpath = ["."]
+
+testpaths = ["tests"]
+
+# 严格模式：任何警告都不隐藏，便于发现弃用问题
+filterwarnings = [
+    "error::DeprecationWarning:juj.*",
+]
+
+# 默认不生成缓存文件，保持工作区干净
+addopts = "-ra"
+
+markers = [
+    "slow: 耗时较长的用例",
+]

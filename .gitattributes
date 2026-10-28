@@ -1,0 +1,64 @@
+# ==========================================================
+# JUJ 合成行情回测 Demo —— 换行符与文件属性
+#
+# 目的：
+#   避免不同操作系统（Windows / macOS / Linux）之间
+#   因换行符差异产生整文件 diff，污染代码评审。
+#
+# 规则优先级（Git 官方定义）：
+#   同一文件被多个模式匹配时，**最后一个**模式生效。
+#   因此 binary 规则放在最后，确保不会被前面的 text 规则覆盖。
+# ==========================================================
+
+
+# ----------------------------------------------------------
+# 默认：按文本处理，检出时统一为 LF
+# ----------------------------------------------------------
+* text=auto eol=lf
+
+
+# ----------------------------------------------------------
+# 明确的文本类型
+# ----------------------------------------------------------
+*.py      text eol=lf
+*.ts      text eol=lf
+*.vue     text eol=lf
+*.js      text eol=lf
+*.json    text eol=lf
+*.md      text eol=lf
+*.txt     text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.toml    text eol=lf
+*.cfg     text eol=lf
+*.ini     text eol=lf
+*.html    text eol=lf
+*.css     text eol=lf
+*.svg     text eol=lf
+*.sql     text eol=lf
+*.sh      text eol=lf
+*.bat     text eol=lf
+*.ps1     text eol=lf
+
+
+# ----------------------------------------------------------
+# 二进制类型：不做换行符转换
+#
+# package-lock.json 虽为 JSON，但含大量完整性哈希，
+# 某些工具链会重排键序导致无意义的整文件 diff，
+# 因此单独排除。
+# ----------------------------------------------------------
+package-lock.json -text
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.woff     binary
+*.woff2    binary
+*.ttf      binary
+*.eot      binary
+*.pdf      binary
+*.zip      binary
+*.gz       binary
+*.whl      binary

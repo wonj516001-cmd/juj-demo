@@ -1,0 +1,131 @@
+JUJ 合成行情 Demo
+Copyright 2026 wonj516001
+
+This product includes software developed by third parties.
+
+The full terms of the Apache License, Version 2.0 governing this Work are
+in the LICENSE file at the root of this repository. Attribution notices for
+bundled third-party components are reproduced below.
+
+
+----------------------------------------------------------------------------
+Apache ECharts
+----------------------------------------------------------------------------
+ECharts is licensed under the Apache License, Version 2.0.
+
+  Apache ECharts
+  Copyright 2017-2026 The Apache Software Foundation
+
+  This product includes software developed at
+  The Apache Software Foundation (https://www.apache.org/).
+
+Upstream: https://github.com/apache/echarts
+License:  https://github.com/apache/echarts/blob/master/LICENSE
+
+Note: the copyright in this notice belongs to The Apache Software Foundation.
+It is reproduced here as required by the Apache License, Version 2.0, Section
+4(d). It is not a claim of ownership by the JUJ project author.
+
+
+----------------------------------------------------------------------------
+Apache ECharts subcomponent: d3.js
+----------------------------------------------------------------------------
+ECharts embeds material derived from d3.js, which is licensed under the
+BSD 3-Clause License:
+
+  Copyright 2010-2016 Mike Bostock
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without modification,
+  are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+  * Neither the name of the author nor the names of contributors may be used to
+    endorse or promote products derived from this software without specific prior
+    written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+  ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+  ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This notice is reproduced from the ECharts package (licenses/LICENSE-d3).
+The copyright above belongs to Mike Bostock and the d3.js contributors.
+
+
+----------------------------------------------------------------------------
+zrender
+----------------------------------------------------------------------------
+zrender is licensed under the BSD 3-Clause License:
+
+  Copyright (c) 2017, Baidu Inc.
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+  * Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+This notice is reproduced from the zrender package (zrender/LICENSE).
+The copyright above belongs to Baidu Inc.
+
+
+----------------------------------------------------------------------------
+Other third-party components
+----------------------------------------------------------------------------
+The remaining runtime and build-time dependencies of this project are
+distributed under permissive, non-copyleft terms (MIT, BSD, ISC, 0BSD, PSF,
+Apache-2.0, Zlib, CC0). They are installed by the package manager from
+their upstream registries rather than vendored into this repository, so
+their own license and notice files travel with the installed packages.
+
+Principal runtime dependencies:
+  - Vue.js, vue-router, Element Plus, axios        (MIT)
+  - Apache ECharts                                  (Apache-2.0, see above)
+  - zrender                                         (BSD-3-Clause, see above)
+  - tslib                                           (0BSD)
+  - FastAPI, Pydantic, pytest                       (MIT)
+  - Starlette, Uvicorn, httpx, pandas               (BSD)
+  - NumPy                                           (BSD-3-Clause AND 0BSD AND MIT
+                                                      AND Zlib AND CC0-1.0)
+
+Principal build-time dependencies:
+  - Vite, vue-tsc, @vitejs/plugin-vue, @vue/tsconfig (MIT)
+  - TypeScript                                      (Apache-2.0)
+
+No copyleft (GPL / LGPL / AGPL) license applies to any component listed
+above, and no source-code-disclosure obligation is created by this project
+as a result of its dependencies.
